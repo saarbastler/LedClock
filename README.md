@@ -20,4 +20,5 @@ The 3d printed parts "bohrschablone" help to drill the holes at the right place 
 
 The software is written "bare metal" using my [AvrLibrary](https://github.com/saarbastler/AvrLibrary). It can be compiled using Atmel Studio 7. Clicking the turn encoder will enter the menu turning will select a menu, click again will enter the menu for setting the time/date etc. The menu itself is in German.
 
- 
+The java fx application "Designer" compiled in eclipse, is a grafical designer to paint the clock faces and hands. It writes the file zeiger.cpp used in the firmware.
+  
