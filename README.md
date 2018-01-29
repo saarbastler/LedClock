@@ -1,2 +1,11 @@
 # LedClock
 Clock made of 512 Led's
+
+![Led clock](/images/clock1.png)
+
+480 Leds in mounted in a ring of 8 x 60 plus 32 Led's as a four digit 7 Segment display.
+
+I built this clock a long time ago using a 8032 microprocessor with EPROM and RAM. It has got two PCB's, one is the controller 160mm * 100mm and the Led pcb 200mm * 200mm. A third small breadboard in the center has been mounted later to hold a four digit Sevensegment display.
+
+A year ago, the clock did stop working. The controller pcb had a failure, but the led pcb was still ok. Because I did'nt found the 8032 software, I started to rebuild the controller using a ATMega 328.
+  
