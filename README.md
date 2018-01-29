@@ -17,4 +17,7 @@ The 3D model is designed in openscad. I ordered a few pre cutted acryl glass par
 2* side 211mm x 107mm x 50mm (trapezoid)
 
 The 3d printed parts "bohrschablone" help to drill the holes at the right place in the acryl glass. The parts staenderL.stl and staenderR.stl are on the bottom, halterL.stl and halterR.stl on the top. I had to tap a few M3 threads to fix the acryl glass plates.
-    
+
+The software is written "bare metal" using my [AvrLibrary](https://github.com/saarbastler/AvrLibrary). It can be compiled using Atmel Studio 7. Clicking the turn encoder will enter the menu turning will select a menu, click again will enter the menu for setting the time/date etc. The menu itself is in German.
+
+ 

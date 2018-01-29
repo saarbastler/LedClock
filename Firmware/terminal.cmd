@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\teraterm\ttermpro" /BAUD=57600 /C=10
