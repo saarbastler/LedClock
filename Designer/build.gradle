@@ -7,16 +7,25 @@
  */
 
 // Apply the java plugin to add support for Java
+//apply plugin: 'java-library'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-/*sourceSets {
-    main {
-        java {
-            srcDirs = ["src/main","src/test"]
-        }
+version = '0.2'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Implementation-Title': 'Saarbastler LED CLock Designer',
+        	'Implementation-Version': version,
+        	'Main-Class': 'de.saba.Main'
     }
-}*/
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {

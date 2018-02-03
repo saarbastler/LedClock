@@ -85,8 +85,7 @@ public class Main extends Application implements Constants
   {
     mainStage = primaryStage;
 
-    // ClockFace clockFace = new ClockFace( "Test" );
-    // clock.getChildren().add( clockFace );
+    initialDirectory = new java.io.File( "." ).getAbsoluteFile();
 
     try
     {
@@ -191,7 +190,8 @@ public class Main extends Application implements Constants
       vbox.getChildren().addAll( menuBar, toolbar, hbox );
 
       Scene scene = new Scene( vbox, 150 + 2 * (int) offsetX, 70 + 2 * (int) offsetY );
-      scene.getStylesheets().add( getClass().getResource( "application.css" ).toExternalForm() );
+      // scene.getStylesheets().add( getClass().getResource( "application.css"
+      // ).toExternalForm() );
 
       primaryStage.setScene( scene );
       primaryStage.show();
@@ -464,7 +464,7 @@ public class Main extends Application implements Constants
       out.println();
       out.println( "const SPRITE sprites[] PROGMEM = {" );
       out.print( "  " );
-      
+
       index.set( 0 );
       clock.getClockFaces().getChildren().forEach( cf -> cf.exportStruct( out, index ) );
 
@@ -483,7 +483,7 @@ public class Main extends Application implements Constants
       index.set( 0 );
       clock.getClockDials().getChildren().forEach( cd -> cd.export( out, index.getAndIncrement() ) );
       out.println( "};" );
-      
+
       out.println();
       out.print( "constexpr uint8_t DIALS=" );
       out.print( clock.getClockDials().getChildren().size() );
